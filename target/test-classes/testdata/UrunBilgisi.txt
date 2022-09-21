@@ -1,0 +1,15 @@
+Ürün Bilgi
+Marka MONSTER
+Üretici Monster
+İşlemci Markası Intel
+İşlemci Türü Intel Core i5
+İşlemci Hızı 4.5 GHz
+İşlemci Sayısı 1
+Bilgisayar Bellek Türü SODIMM
+Sabit Sürücü Boyutu 500 GB
+Sabit Sürücü Arabirimi Solid State
+Grafik İşlemci Üreticisi NVIDIA
+Donanım Platformu PC
+Üretici Monster
+ASIN B0B8N69H7V
+Fiyat: 21.363,02 TL
