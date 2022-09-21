@@ -11,7 +11,7 @@
 - Feature üzerinden run edilebilir  
   
 
-- Runner classından '@testinium' tag'i ile run edilebilir  
+- Runner classından '@amazon' tag'i ile run edilebilir  
   
 
 - Terminalden mvn clean verify komutu ile run edilebilir  
