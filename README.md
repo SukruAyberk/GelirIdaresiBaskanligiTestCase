@@ -1,4 +1,4 @@
-# <div align="center">Testinium Test Case</div>  
+# <div align="center">Amazon Test Case</div>  
 
 <div align="center">
 <img src="https://github.com/SukruAyberk/Giffs/blob/main/ezgif-4-45df9a3177.gif" style="width:800px;height:450px" alt="[video-to-gif output image]">
