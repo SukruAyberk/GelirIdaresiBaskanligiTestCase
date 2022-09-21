@@ -129,6 +129,7 @@ public class AmazonStepDefinitions {
     @Then("Kullanici urunu sepetten siler ve sepetin bos oldugunu kontrol eder")
     public void kullaniciUrunuSepettenSilerVeSepetinBosOldugunuKontrolEder() {
         amazon.deleteButton.click();
+        ReusableMethods.waitFor(1);
         String expectedResult = "Amazon sepetiniz boş.";
         String actualResult = amazon.emptyCartResultText.getText();
         System.out.println(actualResult);

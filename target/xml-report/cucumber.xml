@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="33.655">
-    <testcase classname="Gelir Idaresi Baskanligi Test Case" name="Kullanici amazon sayfasinda bilgisayar aratir, sepete ekler ve sepetten cikarir" time="33.539">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="34.023">
+    <testcase classname="Gelir Idaresi Baskanligi Test Case" name="Kullanici amazon sayfasinda bilgisayar aratir, sepete ekler ve sepetten cikarir" time="33.899">
         <system-out>
             <![CDATA[Given Kullanici "amazonUrl" anasayfasinda...................................passed
 And Kullanici arama kutusuna "Bilgisayar" girer.............................passed
