@@ -134,5 +134,6 @@ public class AmazonStepDefinitions {
         String actualResult = amazon.emptyCartResultText.getText();
         System.out.println(actualResult);
         Assert.assertEquals(expectedResult, actualResult);
+
     }
 }
