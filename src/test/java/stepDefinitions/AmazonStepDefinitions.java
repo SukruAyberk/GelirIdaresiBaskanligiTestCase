@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import pages.AmazonPage;
@@ -15,6 +16,7 @@ import utilities.ReusableMethods;
 
 import java.util.NoSuchElementException;
 
+import java.util.Set;
 import java.util.concurrent.TimeoutException;
 
 public class AmazonStepDefinitions {
@@ -28,13 +30,12 @@ public class AmazonStepDefinitions {
     @Given("Kullanici {string} anasayfasinda")
     public void kullanici_anasayfasinda(String url) {
         Driver.getDriver().get(ConfigReader.getProperty(url));
-        //cookie list al listeyi sorgula if içinde -_-
         try {
+            ReusableMethods.waitForVisibility(amazon.cookie, 5);
             amazon.cookie.click();
-        } catch (NoSuchElementException e) {
-            System.out.println("Cookie çıkmadı");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
 
     }
 

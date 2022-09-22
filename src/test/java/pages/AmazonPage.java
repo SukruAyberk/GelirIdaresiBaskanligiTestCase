@@ -37,13 +37,9 @@ public class AmazonPage {
 
     @FindBy(xpath = "(//tbody)[2]")
     public WebElement productInfo;
-    ////span[@id='productTitle']
 
     @FindBy(xpath = "(//span[@class='a-price-whole'])[1]")
     public WebElement productPriceWhole;
-
-    @FindBy(xpath = "(//span[@class='a-price-decimal'])[1]")
-    public WebElement productPriceDecimal;
 
     @FindBy(xpath = "(//span[@class='a-price-fraction'])[1]")
     public WebElement productPriceFraction;
