@@ -30,13 +30,7 @@ public class AmazonStepDefinitions {
     @Given("Kullanici {string} anasayfasinda")
     public void kullanici_anasayfasinda(String url) {
         Driver.getDriver().get(ConfigReader.getProperty(url));
-        try {
-            ReusableMethods.waitForVisibility(amazon.cookie, 5);
-            amazon.cookie.click();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        ReusableMethods.cookieHandle(amazon.cookie);
     }
 
     @Then("Kullanici arama kutusuna {string} girer")

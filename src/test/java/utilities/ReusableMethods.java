@@ -172,4 +172,12 @@ public class ReusableMethods {
 
     }
 
+    public static void cookieHandle(WebElement cookie) {
+        try {
+            cookie.click();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
