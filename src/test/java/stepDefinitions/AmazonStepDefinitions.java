@@ -29,7 +29,7 @@ public class AmazonStepDefinitions {
 
     @Given("Kullanici {string} anasayfasinda")
     public void kullanici_anasayfasinda(String url) {
-        Driver.getDriver().get(ConfigReader.getProperty(url));
+        Driver.getDriver().get(ConfigReader.getProperty(url)); // singleton pattern
         ReusableMethods.cookieHandle(amazon.cookie);
     }
 
@@ -65,13 +65,10 @@ public class AmazonStepDefinitions {
 
     @And("Kullanici secilen urun bilgisi ve tutar bilgisi txt doyasina yazdirir")
     public void kullaniciSecilenUrunBilgisiVeTutarBilgisiTxtDoyasinaYazdirir() {
-        System.out.println(amazon.productInfo.getText());
+        // ürün stokta kalmayacağı düşünülerek dinamik bir yapı oluşturmaya çalıştım
         secilenUrunFiyati = amazon.productPriceWhole.getText() + "," + amazon.productPriceFraction.getText() + " " + amazon.productPriceSymbol.getText();
-        System.out.println("secilen urun fiyati: " + secilenUrunFiyati);
-
         String filePath = "src/test/resources/testdata/UrunBilgisi.txt";
         String yazdirilacakBilgi = "Ürün Bilgi\n" + amazon.productInfo.getText() + "\nFiyat: " + secilenUrunFiyati;
-        //System.out.println(yazdirilacakBilgi);
         ReusableMethods.writeToText(filePath, yazdirilacakBilgi);
     }
 
@@ -88,7 +85,6 @@ public class AmazonStepDefinitions {
     @Then("Kullanici secilen urun ile sepette yer alan urun fiyatinin dogrulamasini yapar")
     public void kullaniciSecilenUrunIleSepetteYerAlanUrunFiyatininDogrulamasiniYapar() {
         String sepettekiFiyat = amazon.cartPrice.getText();
-        System.out.println("sepetteki fiyat: " + sepettekiFiyat);
         Assert.assertEquals(secilenUrunFiyati, sepettekiFiyat);
     }
 
@@ -98,17 +94,12 @@ public class AmazonStepDefinitions {
         select.selectByVisibleText(newQuantity);
         ReusableMethods.waitFor(1); // elementi göremediği için 1 saniye bekletildi
         String actualResult = amazon.twoProductResultText.getText();
-        System.out.println(actualResult);
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
     @Then("Kullanici urunu sepetten siler ve sepetin bos oldugunu kontrol eder")
     public void kullaniciUrunuSepettenSilerVeSepetinBosOldugunuKontrolEder() {
         amazon.deleteButton.click();
-        String expectedResult = "Amazon sepetiniz boş.";
-        String actualResult = amazon.emptyCartResultText.getText();
-        System.out.println(actualResult);
-        Assert.assertEquals(expectedResult, actualResult);
-
+        Assert.assertTrue(amazon.emptyCartResultText.isDisplayed());
     }
 }

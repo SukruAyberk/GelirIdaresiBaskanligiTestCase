@@ -161,7 +161,6 @@ public class ReusableMethods {
     }
 
     public static void writeToText(String filePath, String text) {
-
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, false));
             writer.append(text);
