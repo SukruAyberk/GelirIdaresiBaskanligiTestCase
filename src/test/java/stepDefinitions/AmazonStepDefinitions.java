@@ -30,7 +30,7 @@ public class AmazonStepDefinitions {
     @Given("Kullanici {string} anasayfasinda")
     public void kullanici_anasayfasinda(String url) {
         Driver.getDriver().get(ConfigReader.getProperty(url)); // singleton pattern
-        ReusableMethods.cookieHandle(amazon.cookie);
+        ReusableMethods.cookieHandle(amazon.cookie); // cookieleri handle edebilmek için oluşturduğum method
     }
 
     @Then("Kullanici arama kutusuna {string} girer")
@@ -69,6 +69,8 @@ public class AmazonStepDefinitions {
         secilenUrunFiyati = amazon.productPriceWhole.getText() + "," + amazon.productPriceFraction.getText() + " " + amazon.productPriceSymbol.getText();
         String filePath = "src/test/resources/testdata/UrunBilgisi.txt";
         String yazdirilacakBilgi = "Ürün Bilgi\n" + amazon.productInfo.getText() + "\nFiyat: " + secilenUrunFiyati;
+
+        // bilgileri txt uzantılı dosyaya yazdırmak için oluşturduğum method
         ReusableMethods.writeToText(filePath, yazdirilacakBilgi);
     }
 
