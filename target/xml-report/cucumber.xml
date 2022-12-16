@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="17.324">
-    <testcase classname="Gelir Idaresi Baskanligi Test Case" name="Kullanici amazon sayfasinda bilgisayar aratir, sepete ekler ve sepetten cikarir" time="17.201">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="17.572">
+    <testcase classname="Gelir Idaresi Baskanligi Test Case" name="Kullanici amazon sayfasinda bilgisayar aratir, sepete ekler ve sepetten cikarir" time="17.442">
         <system-out>
             <![CDATA[Given Kullanici "amazonUrl" anasayfasinda...................................passed
 And Kullanici arama kutusuna "Bilgisayar" girer.............................passed
 And Kullanici search butonuna tiklar........................................passed
-And Kullanici marka "Monster" secer.........................................passed
+And Kullanici marka "MONSTER" secer.........................................passed
 And Kullanici fiyati minimum "15000" ve maksimum "30000" girer..............passed
 And Kullanici gelen listeden ikinci urune tiklar............................passed
 And Kullanici secilen urun bilgisi ve tutar bilgisi txt doyasina yazdirir...passed

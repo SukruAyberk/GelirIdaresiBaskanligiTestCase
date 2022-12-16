@@ -104,4 +104,6 @@ public class AmazonStepDefinitions {
         amazon.deleteButton.click();
         Assert.assertTrue(amazon.emptyCartResultText.isDisplayed());
     }
+
+
 }

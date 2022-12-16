@@ -5,7 +5,7 @@ Feature: Gelir Idaresi Baskanligi Test Case
     Given Kullanici "amazonUrl" anasayfasinda
     And Kullanici arama kutusuna "Bilgisayar" girer
     And Kullanici search butonuna tiklar
-    And Kullanici marka "Monster" secer
+    And Kullanici marka "MONSTER" secer
     And Kullanici fiyati minimum "15000" ve maksimum "30000" girer
     And Kullanici gelen listeden ikinci urune tiklar
     And Kullanici secilen urun bilgisi ve tutar bilgisi txt doyasina yazdirir
